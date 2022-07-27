@@ -7,7 +7,6 @@
 // module.exports = nextConfig
 
 module.exports = {
-	reactStrictMode: true,
 	swcMinify: true,
 	experimental: {
 		images: {
