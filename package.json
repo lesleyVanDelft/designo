@@ -1,7 +1,7 @@
 {
 	"name": "designo",
 	"version": "0.1.0",
-	"homepage": "https://designo2.vercel.app",
+	"homepage": ".",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
