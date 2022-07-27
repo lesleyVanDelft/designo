@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from 'react';
+import { FaChevronRight } from 'react-icons/fa';
 import styles from '../../styles/sass/components/Card.module.scss';
 
 const Card = ({ title, currClass, children }) => {
@@ -24,7 +25,9 @@ const Card = ({ title, currClass, children }) => {
 			{/* <article> */}
 			<h2>{title}</h2>
 
-			<button onClick={() => console.log(currClass)}>View Projects </button>
+			<button onClick={() => console.log(currClass)}>
+				View Projects <FaChevronRight />
+			</button>
 		</article>
 	);
 };

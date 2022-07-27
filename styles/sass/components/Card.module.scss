@@ -1,3 +1,4 @@
+$peach: hsl(11, 73%, 66%);
 .Card {
 	background-color: orange;
 	&__web,
@@ -45,12 +46,19 @@
 			z-index: 50;
 			font-family: Jost;
 			font-size: 15px;
-			font-weight: 500;
+			font-weight: 400;
 			line-height: 22px;
 			letter-spacing: 5px;
 			text-align: left;
 			text-transform: uppercase;
 			padding-top: 0.6rem;
+			display: flex;
+			align-items: center;
+			svg {
+				color: $peach;
+				font-size: 0.75rem;
+				margin-left: 1rem;
+			}
 		}
 	}
 	&__web {

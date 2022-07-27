@@ -8,6 +8,8 @@ import Image from 'next/image';
 import phoneImg from '../../public/assets/home/desktop/image-hero-phone.png';
 import Landing from './Landing';
 import Projects from './Projects';
+import Description from './Description';
+import Footer from '../../components/Footer';
 
 const Homepage = () => {
 	return (
@@ -16,6 +18,8 @@ const Homepage = () => {
 			<Navbar />
 			<Landing />
 			<Projects />
+			<Description />
+			<Footer />
 		</>
 		// </div>
 	);

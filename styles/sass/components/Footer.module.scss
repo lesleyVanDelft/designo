@@ -1,0 +1,74 @@
+.Footer {
+	min-height: 100vh;
+	// height: 100%;
+	background-color: #1d1c1e;
+	padding: 0 1.5rem;
+	padding-bottom: 4.0625rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: white;
+	position: relative;
+	padding-top: 2.5rem;
+
+	&__image {
+		border-bottom: 1px solid rgba(128, 128, 128, 0.332);
+		padding-top: 15.625rem;
+		padding-bottom: 1.8rem;
+		width: 100%;
+	}
+
+	&__content {
+		padding-top: 1.5rem;
+		ul {
+			list-style: none;
+			font-family: Jost;
+			font-size: 0.9375rem;
+			font-weight: 400;
+			line-height: 14px;
+			letter-spacing: 2px;
+			// text-align: left;
+			text-transform: uppercase;
+			padding-top: 1rem;
+
+			li {
+				padding-bottom: 2rem;
+				// &:first-of-type {
+				// 	padding-top: rem;
+				// }
+
+				&:last-of-type {
+					padding-bottom: 3rem;
+				}
+			}
+		}
+
+		.text {
+			color: rgba(255, 255, 255, 0.532);
+			line-height: 26px;
+			h3 {
+				font-weight: 600;
+			}
+			p {
+				// padding: 0 2rem;
+				// color: red;
+			}
+
+			&:nth-child(3) {
+				// padding-top: 2.5rem;
+				// padding-bottom: 2.5rem;
+				padding: 2.5rem 0;
+			}
+		}
+
+		.icons {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			// background-color: red;
+			// padding-: 2.5rem;
+			padding-top: 1rem;
+		}
+	}
+}
