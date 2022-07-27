@@ -1,0 +1,51 @@
+// $peach: hsl(11, 73%, 66%);
+
+.Navbar {
+	display: flex;
+	width: 100%;
+	position: relative;
+	justify-content: space-between;
+	// overflow-x: hidden;
+	height: 5rem;
+	align-items: center;
+	padding: 0 1.5rem;
+
+	picture {
+		display: flex;
+		align-items: center;
+	}
+
+	&__list {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		// align-items: center;
+		// bottom: -14.3rem;
+		// top: 80px;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 1);
+		color: rgba(255, 255, 255, 1);
+		height: 14.6875rem;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 400;
+		align-items: left;
+		padding-left: 1.6rem;
+		padding-top: 2.34rem;
+		z-index: 51;
+
+		li {
+			padding-bottom: 1.5rem;
+
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+		}
+
+		// width: 100%;
+		// right: -150%;
+	}
+}

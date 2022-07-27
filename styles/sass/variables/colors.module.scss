@@ -3,3 +3,7 @@ $peach-light: hsl(11, 100%, 80%);
 $black: hsl(270, 3%, 11%);
 $gray-dark: hsl(264, 5%, 20%);
 $gray-light: hsl(210, 17%, 95%);
+
+:export {
+	peach: $peach;
+}
