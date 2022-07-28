@@ -7,10 +7,32 @@
 // module.exports = nextConfig
 
 module.exports = {
+	reactStrictMode: true,
 	swcMinify: true,
 	experimental: {
 		images: {
 			allowFutureImage: true,
 		},
 	},
+	async redirects() {
+		return [
+			{
+				source: '/',
+				destination: '/home',
+				permanent: true,
+			},
+		];
+	},
 };
+
+// module.exports = {
+// 	async redirechts() {
+// 		return [
+// 			{
+// 				source: '/',
+// 				destination: '/home',
+// 				permanent: true,
+// 			},
+// 		]
+// 	}
+// }
