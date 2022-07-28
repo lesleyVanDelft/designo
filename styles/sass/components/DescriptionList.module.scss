@@ -8,3 +8,13 @@
 	// font-family: inherit;
 	padding-bottom: 13rem;
 }
+
+@media screen and(min-width: 768px) {
+	.DescriptionList {
+		// flex-direction: row;
+		padding: 0;
+		padding-left: 5px;
+		padding-bottom: 17rem;
+	}
+	// padding: 0;
+}

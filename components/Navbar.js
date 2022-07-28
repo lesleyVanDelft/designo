@@ -3,12 +3,19 @@ import Hamburger from '../public/assets/shared/mobile/icon-hamburger.svg';
 import CloseIcon from '../public/assets/shared/mobile/icon-close.svg';
 import styles from '../styles/sass/components/Navbar.module.scss';
 // import variables from '../styles/sass/variables/colors';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useOutsideClick } from '../hooks/useOutsideClick';
 
 const Navbar = () => {
 	const [menuActive, setMenuActive] = useState(false);
+	const navbarRef = useRef(null);
+
+	// Close menu on click/tap outside menu
+	useOutsideClick(navbarRef, () => {
+		menuActive && setMenuActive(false);
+	});
 
 	const framerVariant = {
 		hidden: {
@@ -26,7 +33,6 @@ const Navbar = () => {
 		},
 		exit: {
 			opacity: 0,
-			// y: '100vw',
 			x: 500,
 			transition: {
 				duration: 0.3,
@@ -35,15 +41,21 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className={styles.Navbar}>
+		<nav className={styles.Navbar} ref={navbarRef}>
 			<Logo />
-			<div>
+			<div className={styles.Navbar__mobileMenuToggle}>
 				<Image
 					src={Hamburger}
 					alt="Mobile hamburger icon"
 					onClick={() => setMenuActive(!menuActive)}
 				/>
 			</div>
+
+			<ul className={styles.Navbar__items}>
+				<li>Our Company</li>
+				<li>Locations</li>
+				<li>Contact</li>
+			</ul>
 
 			<AnimatePresence exitBeforeEnter={false}>
 				{menuActive && (

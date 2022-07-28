@@ -8,6 +8,10 @@ body {
 	span {
 		display: inherit;
 	}
+
+	// @media screen and (min-width: 768px) {
+	// 	padding: 0 2.4375rem;
+	// }
 }
 *,
 *::after,
@@ -15,6 +19,10 @@ body {
 	padding: 0;
 	margin: 0;
 	box-sizing: inherit;
+}
+
+ul {
+	list-style: none;
 }
 
 // span[style^='box-sizing:border-box;display:inline-block'] {

@@ -4,7 +4,9 @@ import styles from '../../styles/sass/components/DescriptionSection.module.scss'
 const Description = () => {
 	return (
 		// <Layout currClass={styles.DescriptionSection}>
-		<DescriptionList />
+		<section className={styles.DescriptionSection}>
+			<DescriptionList />
+		</section>
 		// </Layout>
 	);
 };

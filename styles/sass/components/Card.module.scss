@@ -15,6 +15,7 @@ $peach: hsl(11, 73%, 66%);
 		color: white;
 		position: relative;
 		z-index: 49;
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -25,6 +26,7 @@ $peach: hsl(11, 73%, 66%);
 			top: 0;
 			bottom: 0;
 			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: inherit;
 		}
 		h2 {
 			text-transform: uppercase;
@@ -65,13 +67,54 @@ $peach: hsl(11, 73%, 66%);
 		// background-color: red;
 		background-image: url('../../../public/assets/home/mobile/image-web-design.jpg');
 		// background-blend-mode: darken(black, 100%);
+		@media screen and(max-width: 768px) {
+			background-image: url('../../../public/assets/home/tablet/image-web-design.jpg');
+			h2 {
+				font-size: 2.5rem;
+				letter-spacing: 2px;
+			}
+			button {
+				padding-top: 1.5rem;
+			}
+		}
 	}
 	&__app {
 		// background-color: purple;
 		background-image: url('../../../public/assets/home/mobile/image-app-design.jpg');
+		@media screen and(max-width: 768px) {
+			background-image: url('../../../public/assets/home/tablet/image-app-design.jpg');
+			h2 {
+				font-size: 2.5rem;
+				letter-spacing: 2px;
+			}
+			button {
+				padding-top: 1.5rem;
+			}
+		}
 	}
 	&__graphic {
 		// background-color: teal;
 		background-image: url('../../../public/assets/home/mobile/image-graphic-design.jpg');
+		@media screen and(max-width: 768px) {
+			background-image: url('../../../public/assets/home/tablet/image-graphic-design.jpg');
+			h2 {
+				font-size: 2.5rem;
+				letter-spacing: 2px;
+			}
+			button {
+				padding-top: 1.5rem;
+			}
+		}
+	}
+}
+
+@media screen and(min-width: 768px) {
+	.Card {
+		&__web,
+		&__app,
+		&__graphic {
+			width: 100%;
+			height: 12.5rem;
+		}
 	}
 }
