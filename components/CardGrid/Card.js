@@ -2,11 +2,10 @@ import { React, useEffect, useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import styles from '../../styles/sass/components/Card.module.scss';
 
-const Card = ({ title, currClass, children }) => {
+const Card = ({ title, currClass }) => {
 	const [currCat, setCurrCat] = useState(currClass);
 
 	useEffect(() => {
-		// setCurrCat(currClass);
 		if (currClass === 'web') {
 			setCurrCat(styles.Card__web);
 		}
@@ -22,9 +21,7 @@ const Card = ({ title, currClass, children }) => {
 
 	return (
 		<article className={`${currCat}`}>
-			{/* <article> */}
 			<h2>{title}</h2>
-
 			<button onClick={() => console.log(currClass)}>
 				View Projects <FaChevronRight />
 			</button>

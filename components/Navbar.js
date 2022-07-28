@@ -1,5 +1,6 @@
 import Logo from './Logo';
 import Hamburger from '../public/assets/shared/mobile/icon-hamburger.svg';
+import CloseIcon from '../public/assets/shared/mobile/icon-close.svg';
 import styles from '../styles/sass/components/Navbar.module.scss';
 // import variables from '../styles/sass/variables/colors';
 import React, { useState } from 'react';
