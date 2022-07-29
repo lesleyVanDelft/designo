@@ -5,8 +5,12 @@
 	padding: 0 1.5rem;
 }
 
-@media screen and(min-width: 768px) {
+@media screen and(min-width: 1024px) {
 	.CardGrid {
-		// padding: 0;
+		grid-template-columns: 1fr 1fr;
+		padding: 0rem 0.5rem;
+		margin-inline: auto;
+		width: 1112px;
+		height: 640px;
 	}
 }

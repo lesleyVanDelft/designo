@@ -64,11 +64,23 @@ $peach: hsl(11, 73%, 66%);
 		}
 	}
 	&__web {
-		// background-color: red;
 		background-image: url('../../../public/assets/home/mobile/image-web-design.jpg');
-		// background-blend-mode: darken(black, 100%);
-		@media screen and(max-width: 768px) {
+
+		//Tablets
+		@media screen and(min-width: 768px) {
 			background-image: url('../../../public/assets/home/tablet/image-web-design.jpg');
+			h2 {
+				font-size: 2.5rem;
+				letter-spacing: 2px;
+			}
+			button {
+				padding-top: 1.5rem;
+			}
+		}
+
+		// Desktop
+		@media screen and(min-width: 1024px) {
+			background-image: url('../../../public/assets/home/desktop/image-web-design-large.jpg');
 			h2 {
 				font-size: 2.5rem;
 				letter-spacing: 2px;
@@ -79,10 +91,23 @@ $peach: hsl(11, 73%, 66%);
 		}
 	}
 	&__app {
-		// background-color: purple;
 		background-image: url('../../../public/assets/home/mobile/image-app-design.jpg');
-		@media screen and(max-width: 768px) {
+
+		// Tablets
+		@media screen and(min-width: 768px) {
 			background-image: url('../../../public/assets/home/tablet/image-app-design.jpg');
+			h2 {
+				font-size: 2.5rem;
+				letter-spacing: 2px;
+			}
+			button {
+				padding-top: 1.5rem;
+			}
+		}
+
+		// Desktop
+		@media screen and(min-width: 1024px) {
+			background-image: url('../../../public/assets/home/desktop/image-app-design.jpg');
 			h2 {
 				font-size: 2.5rem;
 				letter-spacing: 2px;
@@ -93,10 +118,23 @@ $peach: hsl(11, 73%, 66%);
 		}
 	}
 	&__graphic {
-		// background-color: teal;
 		background-image: url('../../../public/assets/home/mobile/image-graphic-design.jpg');
-		@media screen and(max-width: 768px) {
-			background-image: url('../../../public/assets/home/tablet/image-graphic-design.jpg');
+
+		// Tablets
+		@media screen and(min-width: 1024px) {
+			background-image: url('../../../public/assets/home/desktop/image-graphic-design.jpg');
+			h2 {
+				font-size: 2.5rem;
+				letter-spacing: 2px;
+			}
+			button {
+				padding-top: 1.5rem;
+			}
+		}
+
+		// Desktop
+		@media screen and(min-width: 1024px) {
+			background-image: url('../../../public/assets/home/desktop/image-graphic-design.jpg');
 			h2 {
 				font-size: 2.5rem;
 				letter-spacing: 2px;
@@ -115,6 +153,31 @@ $peach: hsl(11, 73%, 66%);
 		&__graphic {
 			width: 100%;
 			height: 12.5rem;
+
+			h2 {
+				// padding-bottom: 1rem;
+			}
+		}
+	}
+}
+@media screen and(min-width: 1024px) {
+	.Card {
+		&__web,
+		&__app,
+		&__graphic {
+			width: 100%;
+			height: 12.5rem;
+		}
+		&__app,
+		&__graphic {
+			height: 308px;
+			// grid-row: 1 / span 2;
+		}
+
+		&__web {
+			grid-row: 1 / span 3;
+			// height: auto;
+			height: 640px;
 		}
 	}
 }
