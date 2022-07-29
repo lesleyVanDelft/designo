@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import styles from '../../styles/sass/components/Landing.module.scss';
 import phoneImg from '../../public/assets/home/desktop/image-hero-phone.png';
 
 const Landing = () => {
 	return (
 		<section className={styles.Landing}>
-			<main>
+			<main className={styles.Landing__content}>
 				<div>
 					<h1 className={styles.Landing__heading}>
 						Award-winning custom designs and digital branding solutions
@@ -27,10 +27,10 @@ const Landing = () => {
 						alt={'Image of a mobile phone'}
 						// layout="intrinsic"
 						// sizes="90vw"
-						// width={450}
-						// height={660}
-						layout="fill"
-						objectFit="cover"
+						width={450}
+						height={660}
+						layout="raw"
+						// objectFit="cover"
 						quality={100}
 					/>
 				</figure>

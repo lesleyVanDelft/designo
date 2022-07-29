@@ -55,13 +55,16 @@ $peach: hsl(11, 73%, 66%);
 		background-position: 20% 50%;
 		padding: 0;
 		padding-top: 57px;
+		top: -63%;
+		padding-bottom: 3rem;
 		&__text {
 			h2 {
 				font-size: 40px;
-				padding: 0 12rem;
+				padding: 0 13rem;
+				line-height: 43px;
 			}
 			p {
-				padding: 2rem 7rem;
+				padding: 2rem 9rem;
 				font-size: 1rem;
 			}
 		}

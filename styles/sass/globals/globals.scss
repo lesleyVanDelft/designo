@@ -5,6 +5,8 @@ body {
 	height: 100%;
 	box-sizing: border-box;
 	font-family: 'Jost', sans-serif;
+	max-width: 1440px;
+	margin-inline: auto;
 	span {
 		display: inherit;
 	}

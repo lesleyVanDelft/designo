@@ -7,8 +7,18 @@ import instagramIcon from '../public/assets/shared/desktop/icon-instagram.svg';
 import Image from 'next/future/image';
 import styles from '../styles/sass/components/Footer.module.scss';
 import TalkAbout from './TalkAbout';
+import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 
 const Footer = () => {
+	const isMobile = useMediaQuery({
+		query: '(max-width: 768px)',
+	});
+
+	const isTablet = useMediaQuery({
+		query: '(max-width: 1024px)',
+	});
+	// const [screenSize, setScreenSize] = useState(isMobile);
 	const iconList = [
 		facebookIcon,
 		youtubeIcon,
@@ -16,53 +26,71 @@ const Footer = () => {
 		pinterestIcon,
 		instagramIcon,
 	];
+
+	// useEffect(() => {
+	// 	if (isMobile) {
+	// 		setScreenSize(isMobile);
+	// 	} else if (isTablet) {
+	// 		setScreenSize(isTablet);
+	// 	}
+	// }, [isMobile, isTablet]);
+
 	return (
 		<footer className={styles.Footer}>
 			<TalkAbout />
-			<div className={styles.Footer__image}>
-				<Image
-					src={logo}
-					alt="designo logo"
-					layout="raw"
-					width={202}
-					height={27}
-					quality={100}
-				/>
-			</div>
 
 			<div className={styles.Footer__content}>
-				<ul>
-					<li>Our Company</li>
-					<li>Locations</li>
-					<li>Contact</li>
+				<div className={styles.Footer__image}>
+					<Image
+						src={logo}
+						alt="designo logo"
+						layout="raw"
+						width={202}
+						height={27}
+						quality={100}
+					/>
+
+					<ul className={styles.listTablet}>
+						<li className={styles.listItemTablet}>Our Company</li>
+						<li className={styles.listItemTablet}>Locations</li>
+						<li className={styles.listItemTablet}>Contact</li>
+					</ul>
+				</div>
+
+				<ul className={styles.listMobile}>
+					<li className={styles.listItemMobile}>Our Company</li>
+					<li className={styles.listItemMobile}>Locations</li>
+					<li className={styles.listItemMobile}>Contact</li>
 				</ul>
 
-				<div className={styles.text}>
-					<h3>Designo Central Office</h3>
-					<p>3886 Wellington Street</p>
-					<p>Toronto, Ontario M9C 3J5</p>
-				</div>
+				<div className={styles.textContainer}>
+					<div className={styles.text}>
+						<h3>Designo Central Office</h3>
+						<p>3886 Wellington Street</p>
+						<p>Toronto, Ontario M9C 3J5</p>
+					</div>
 
-				<div className={styles.text}>
-					<h3>Contact Us (Central Office)</h3>
-					<p>P : +1 253-863-8967</p>
-					<p>M : contact@designo.co</p>
-				</div>
+					<div className={styles.text}>
+						<h3>Contact Us (Central Office)</h3>
+						<p>P : +1 253-863-8967</p>
+						<p>M : contact@designo.co</p>
+					</div>
 
-				<div className={styles.icons}>
-					{iconList.map((el, i) => {
-						return (
-							<Image
-								key={i}
-								src={el}
-								alt="Social media icon"
-								layout="raw"
-								width={24}
-								height={24}
-								quality={100}
-							/>
-						);
-					})}
+					<div className={styles.icons}>
+						{iconList.map((el, i) => {
+							return (
+								<Image
+									key={i}
+									src={el}
+									alt="Social media icon"
+									layout="raw"
+									width={24}
+									height={24}
+									quality={100}
+								/>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</footer>

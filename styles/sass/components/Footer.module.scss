@@ -1,5 +1,5 @@
 .Footer {
-	min-height: 100vh;
+	height: 100vh;
 	// height: 100%;
 	background-color: #1d1c1e;
 	padding: 0 1.5rem;
@@ -10,18 +10,55 @@
 	text-align: center;
 	color: white;
 	position: relative;
-	padding-top: 2.5rem;
+	// padding-top: 0.5rem;
+
+	@media screen and (min-width: 768px) {
+		height: 450px;
+		padding: 0 3rem;
+		padding-bottom: 1rem;
+
+		.listMobile {
+			display: none;
+		}
+	}
 
 	&__image {
 		border-bottom: 1px solid rgba(128, 128, 128, 0.332);
-		padding-top: 15.625rem;
+		padding-top: 15rem;
 		padding-bottom: 1.8rem;
 		width: 100%;
+		ul.listTablet {
+			display: none;
+		}
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-top: 8.8125rem;
+			padding-bottom: 2.875rem;
+
+			ul.listTablet {
+				display: flex;
+				align-items: center;
+				padding: 0;
+
+				li.listItemTablet {
+					padding: 0;
+					margin-right: 42px;
+
+					&:last-of-type {
+						margin-right: 0;
+					}
+				}
+			}
+		}
 	}
 
 	&__content {
+		width: 100%;
 		padding-top: 1.5rem;
-		ul {
+		ul.listMobile {
 			list-style: none;
 			font-family: Jost;
 			font-size: 0.9375rem;
@@ -30,9 +67,9 @@
 			letter-spacing: 2px;
 			// text-align: left;
 			text-transform: uppercase;
-			padding-top: 1rem;
+			padding-top: 2rem;
 
-			li {
+			li.listItemMobile {
 				padding-bottom: 2rem;
 				// &:first-of-type {
 				// 	padding-top: rem;
@@ -42,33 +79,58 @@
 					padding-bottom: 3rem;
 				}
 			}
+
+			@media screen and (min-width: 768px) {
+				.listMobile {
+					display: none;
+				}
+			}
 		}
 
-		.text {
-			color: rgba(255, 255, 255, 0.532);
-			line-height: 26px;
-			h3 {
-				font-weight: 600;
-			}
-			p {
-				// padding: 0 2rem;
-				// color: red;
-			}
+		.textContainer {
+			width: 100%;
+			.text {
+				color: rgba(255, 255, 255, 0.532);
+				line-height: 26px;
+				padding-bottom: 40px;
+				h3 {
+					font-weight: 600;
+				}
+				p {
+					// padding: 0 2rem;
+					// color: red;
+				}
 
-			&:nth-child(3) {
-				// padding-top: 2.5rem;
-				// padding-bottom: 2.5rem;
-				padding: 2.5rem 0;
+				&:nth-child(4) {
+					padding-bottom: 1.5rem;
+					// margin-right: 1rem;
+				}
+			}
+			@media screen and (min-width: 768px) {
+				padding-top: 2.5rem;
+				display: flex;
+				justify-content: space-between;
+				text-align: left;
+				font-size: 1rem;
+
+				.text {
+				}
 			}
 		}
 
 		.icons {
-			width: 100%;
+			width: 60%;
+			// margin-inline: auto;
 			display: flex;
 			justify-content: space-between;
-			// background-color: red;
-			// padding-: 2.5rem;
 			padding-top: 1rem;
+
+			@media screen and (min-width: 768px) {
+				width: 25%;
+				align-items: flex-end;
+				padding-top: 0;
+				padding-bottom: 40px;
+			}
 		}
 	}
 }
