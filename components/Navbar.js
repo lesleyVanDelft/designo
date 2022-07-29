@@ -3,19 +3,24 @@ import Hamburger from '../public/assets/shared/mobile/icon-hamburger.svg';
 import CloseIcon from '../public/assets/shared/mobile/icon-close.svg';
 import styles from '../styles/sass/components/Navbar.module.scss';
 // import variables from '../styles/sass/variables/colors';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useOutsideClick } from '../hooks/useOutsideClick';
 
 const Navbar = () => {
 	const [menuActive, setMenuActive] = useState(false);
+	const [menuIcon, setMenuIcon] = useState(Hamburger);
 	const navbarRef = useRef(null);
 
 	// Close menu on click/tap outside menu
 	useOutsideClick(navbarRef, () => {
 		menuActive && setMenuActive(false);
 	});
+
+	useEffect(() => {
+		menuActive ? setMenuIcon(CloseIcon) : setMenuIcon(Hamburger);
+	}, [menuActive]);
 
 	const framerVariant = {
 		hidden: {

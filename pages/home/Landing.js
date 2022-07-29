@@ -31,6 +31,7 @@ const Landing = () => {
 						height={660}
 						layout="raw"
 						// objectFit="cover"
+						priority={true}
 						quality={100}
 					/>
 				</figure>

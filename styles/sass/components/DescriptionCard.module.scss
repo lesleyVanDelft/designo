@@ -33,9 +33,10 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			transform: rotate(-100deg);
+			// transform: rotate(100deg);
+
 			mix-blend-mode: normal;
 			opacity: 0.7;
-			// transform: matrix(-1, 0, 0, 1, 0, 0);
 			z-index: 1;
 			border-radius: inherit;
 		}

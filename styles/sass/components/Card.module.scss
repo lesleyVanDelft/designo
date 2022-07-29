@@ -5,8 +5,11 @@ $peach: hsl(11, 73%, 66%);
 	&__app,
 	&__graphic {
 		background-repeat: no-repeat;
+		background-size: cover;
 		height: 15.625rem;
-		width: 20.4375rem;
+		width: 100%;
+		min-width: 20.4375rem;
+		// min-width: 100%;
 		border-radius: 10px;
 		display: flex;
 		flex-direction: column;
@@ -15,16 +18,13 @@ $peach: hsl(11, 73%, 66%);
 		color: white;
 		position: relative;
 		z-index: 49;
+		margin-inline: auto;
 
 		&::before {
 			content: '';
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
 			background-color: rgba(0, 0, 0, 0.5);
 			border-radius: inherit;
 		}
@@ -34,7 +34,7 @@ $peach: hsl(11, 73%, 66%);
 			font-size: 28px;
 			font-weight: 500;
 			line-height: 36px;
-			letter-spacing: 1.399999976158142px;
+			letter-spacing: 0.0875rem;
 			text-align: center;
 			position: inherit;
 			z-index: 50;

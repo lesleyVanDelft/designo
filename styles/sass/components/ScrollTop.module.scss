@@ -1,0 +1,29 @@
+.ScrollTop,
+.ScrollTopActive {
+	background: transparent;
+	border: none;
+	width: 25px;
+	height: 25px;
+	// display: none;
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	z-index: 51;
+	mix-blend-mode: lighten;
+	display: none;
+	svg {
+		color: orange;
+		font-size: 2.5rem;
+	}
+
+	// &.active {
+	// 	display: block;
+	//     position: fixed;
+	//     bottom: 0;
+	//     right: 0;
+	// }
+}
+
+.ScrollTopActive {
+	display: block;
+}

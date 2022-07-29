@@ -5,6 +5,13 @@
 	padding: 0 1.5rem;
 }
 
+@media screen and(min-width: 768px) {
+	.CardGrid {
+		padding: 0;
+		// width: 100%;
+		// gap: 0;
+	}
+}
 @media screen and(min-width: 1024px) {
 	.CardGrid {
 		grid-template-columns: 1fr 1fr;
