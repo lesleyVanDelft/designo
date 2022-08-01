@@ -22,6 +22,11 @@
 		}
 	}
 
+	@media screen and (min-width: 1024px) {
+		padding: 0 9.375rem;
+		// padding-top: 8rem;
+	}
+
 	&__image {
 		border-bottom: 1px solid rgba(128, 128, 128, 0.332);
 		padding-top: 15rem;
@@ -50,6 +55,18 @@
 					&:last-of-type {
 						margin-right: 0;
 					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 1024px) {
+			padding-top: 6.8rem;
+			// height: 24.5625rem;
+			ul.listTablet {
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				li {
+					cursor: pointer;
 				}
 			}
 		}
@@ -116,6 +133,15 @@
 				.text {
 				}
 			}
+
+			@media screen and(min-width: 1024px) {
+				display: flex;
+				justify-content: space-between;
+
+				.Footer__icons {
+					margin: 0;
+				}
+			}
 		}
 
 		.icons {
@@ -130,6 +156,11 @@
 				align-items: flex-end;
 				padding-top: 0;
 				padding-bottom: 40px;
+			}
+			@media screen and(min-width: 1024px) {
+				align-items: center;
+
+				margin: 0;
 			}
 		}
 	}

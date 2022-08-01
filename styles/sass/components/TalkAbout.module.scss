@@ -57,7 +57,12 @@ $peach: hsl(11, 73%, 66%);
 		padding-top: 57px;
 		top: -63%;
 		padding-bottom: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 		&__text {
+			// display: flex;
+			// flex-direction: column;
 			h2 {
 				font-size: 40px;
 				padding: 0 13rem;
@@ -73,6 +78,49 @@ $peach: hsl(11, 73%, 66%);
 			padding: 1rem;
 			font-size: 15px;
 			letter-spacing: 2px;
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.TalkAbout {
+		width: 1111px;
+		left: 11.5%;
+		padding: 0;
+		text-align: left;
+		background-size: 80%;
+		background-position: 115% 50%;
+		background-repeat: no-repeat;
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+
+			h2,
+			p {
+				padding: 0;
+				text-align: left;
+			}
+			h2 {
+				width: 16.75rem;
+				line-height: 40px;
+			}
+			p {
+				width: 28.75rem;
+				line-height: 26px;
+				font-size: 1rem;
+				font-weight: 300;
+				padding-top: 1.2rem;
+			}
+			// p {
+			// 	padding: 0;
+			// 	text-align: left;
+			// }
+		}
+
+		&__button {
+			white-space: nowrap;
 		}
 	}
 }

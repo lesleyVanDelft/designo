@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BsFillArrowUpCircleFill } from 'react-icons/bs';
 import styles from '../styles/sass/components/ScrollTop.module.scss';
-
+import { motion } from 'framer-motion';
 const ScrollTop = () => {
 	const [active, setActive] = useState(false);
 

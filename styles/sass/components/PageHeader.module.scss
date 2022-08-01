@@ -1,0 +1,29 @@
+$peach: hsl(11, 73%, 66%);
+
+.PageHeader {
+	width: 100%;
+	min-height: 320px;
+	background-color: $peach;
+	background-image: url('../../../public/assets/web-design/desktop/bg-pattern-intro-web.svg');
+	background-size: 220%;
+	background-position: 100% 0%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 0 1.5rem;
+
+	&__text {
+		text-align: center;
+		h1 {
+			font-size: 2rem;
+			text-transform: capitalize;
+			font-weight: 500;
+			padding-bottom: 1rem;
+		}
+		p {
+			font-weight: 300;
+			line-height: 25px;
+		}
+	}
+}
