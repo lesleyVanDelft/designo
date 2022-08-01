@@ -3,7 +3,7 @@ import { FaChevronRight } from 'react-icons/fa';
 import Link from 'next/link';
 import styles from '../../styles/sass/components/Card.module.scss';
 
-const Card = ({ title, currClass }) => {
+const Card = ({ title, currClass, page }) => {
 	const [currCat, setCurrCat] = useState(currClass);
 
 	useEffect(() => {
@@ -21,7 +21,7 @@ const Card = ({ title, currClass }) => {
 	}, []);
 
 	return (
-		<article className={`${currCat}`}>
+		<article className={`${currCat} ${page !== null ? 'pageCard' : ''}`}>
 			<h2>{title}</h2>
 			<button>
 				<Link href={'/web-design'}>

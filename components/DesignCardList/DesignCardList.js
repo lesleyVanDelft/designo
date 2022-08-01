@@ -8,7 +8,14 @@ const DesignCardList = () => {
 		<div className={styles.DesignCardList}>
 			<div>
 				{webDesign.map((el, i) => {
-					return <DesignCard key={i} title={el.title} image={el.image} />;
+					return (
+						<DesignCard
+							key={i}
+							title={el.title}
+							image={el.image}
+							text={el.text}
+						/>
+					);
 				})}
 			</div>
 		</div>

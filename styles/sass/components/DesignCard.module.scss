@@ -1,5 +1,31 @@
+$peach: hsl(11, 73%, 66%);
 .DesignCard {
-	color: black;
-	height: 200px;
 	width: 100%;
+	margin-bottom: 40px;
+	position: relative;
+	z-index: 49;
+
+	&__text {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		background-color: hsla(11, 73%, 66%, 10%);
+		min-height: 9.7rem;
+		padding: 1.2rem 0;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		h2 {
+			color: $peach;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			font-size: 20px;
+			font-weight: 500;
+		}
+		p {
+			padding: 0 2.5rem;
+			line-height: 1.625rem;
+		}
+	}
 }

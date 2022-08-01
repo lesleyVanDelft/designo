@@ -1,17 +1,12 @@
 import Image from 'next/future/image';
 import { useEffect, useState } from 'react';
 import styles from '../../styles/sass/components/DesignCard.module.scss';
+import image1 from '../../public/assets/web-design/desktop/image-express.jpg';
 
 const DesignCard = ({ title, text, image }) => {
-	// const [cardTitle, setCardTitle] = useState('');
-
-	// useEffect(() => {
-	// 	setCardTitle(title);
-	// }, [title]);
-
 	return (
 		<article className={styles.DesignCard}>
-			<figure>
+			<figure className={styles.DesignCard__image}>
 				<Image
 					layout="raw"
 					src={image}
@@ -20,7 +15,10 @@ const DesignCard = ({ title, text, image }) => {
 					height={320}
 				/>
 			</figure>
-			<h2>{title}</h2>
+			<div className={styles.DesignCard__text}>
+				<h2>{title}</h2>
+				<p>{text}</p>
+			</div>
 		</article>
 	);
 };
