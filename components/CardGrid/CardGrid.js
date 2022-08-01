@@ -21,7 +21,14 @@ const CardGrid = () => {
 	return (
 		<div className={styles.CardGrid}>
 			{designTypes.map((el, i) => {
-				return <Card key={i} title={el.title} currClass={el.name} />;
+				return (
+					<Card
+						key={i}
+						title={el.title}
+						currClass={el.name}
+						linkName={el.link}
+					/>
+				);
 			})}
 		</div>
 	);

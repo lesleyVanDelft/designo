@@ -3,14 +3,13 @@
 .Logo {
 	width: 12.625rem;
 	height: auto;
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
+	a {
+		display: flex;
+		align-items: center;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
-	// &__image {
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	object-fit: contain;
-	// }
 }
