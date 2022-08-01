@@ -1,4 +1,4 @@
-import { webDesign, appDesign } from '../../public/cardData';
+import { webDesign, appDesign, graphicDesign } from '../../public/cardData';
 import DesignCard from './DesignCard';
 import styles from '../../styles/sass/components/DesignCardList.module.scss';
 import { useEffect, useState } from 'react';
@@ -34,7 +34,7 @@ const DesignCardList = ({ page }) => {
 					})}
 
 				{page === '/graphic-design' &&
-					webDesign.map((el, i) => {
+					graphicDesign.map((el, i) => {
 						return (
 							<DesignCard
 								key={i}

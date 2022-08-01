@@ -58,6 +58,23 @@ export const appDesign = [
 		text: 'A VR experience app made for Loopstudios',
 	},
 ];
+export const graphicDesign = [
+	{
+		image: '/assets/graphic-design/desktop/image-change.jpg',
+		title: 'Tim Brown',
+		text: "A book cover designed for Tim Brown's new release, 'Change'",
+	},
+	{
+		image: '/assets/graphic-design/desktop/image-boxed-water.jpg',
+		title: 'Boxed Water',
+		text: 'A simple packaging concept made for Boxed Water',
+	},
+	{
+		image: '/assets/graphic-design/desktop/image-science.jpg',
+		title: 'Science!',
+		text: 'A poster made in collaboration with the Federal Art Project',
+	},
+];
 
 export const designTypes = [
 	{
