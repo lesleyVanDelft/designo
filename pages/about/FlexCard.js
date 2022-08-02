@@ -1,11 +1,11 @@
 import Image from 'next/future/image';
 import styles from '../../styles/sass/components/FlexCard.module.scss';
 
-const FlexCard = ({ children, data, index }) => {
+const FlexCard = ({ children, data, peach }) => {
 	return (
 		<article
 			className={`${styles.FlexCard} ${
-				index <= 0 ? styles.FlexCard__peach : 'lol'
+				peach ? styles.FlexCard__peach : 'lol'
 			}`}>
 			<figure className={`${styles.FlexCard__image}`}>
 				<Image
