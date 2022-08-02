@@ -1,0 +1,80 @@
+$peach: hsl(11, 73%, 66%);
+.LocationCards {
+	color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding-top: 7.5rem;
+	padding-bottom: 7.5rem;
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// justify-content: center;
+		margin-bottom: 4rem;
+		&:nth-child(1) {
+			h3 {
+				padding-top: 0;
+			}
+		}
+		&:nth-child(2) {
+			figure {
+				&::before {
+					transform: rotate(0deg);
+				}
+			}
+		}
+		&:nth-child(3) {
+			figure {
+				&::before {
+					transform: rotate(270deg);
+				}
+			}
+		}
+		figure {
+			height: 202px;
+			width: 202px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				background-image: url('../../../public/assets/shared/desktop/bg-pattern-small-circle.svg');
+				background-repeat: no-repeat;
+				transform: rotate(90deg);
+			}
+		}
+		h3 {
+			color: black;
+			font-size: 1.25rem;
+			letter-spacing: 5px;
+			font-weight: 500;
+			text-transform: uppercase;
+			// padding: 1rem 0;
+			padding-bottom: 2rem;
+			padding-top: 2rem;
+		}
+
+		button {
+			border: none;
+			background-color: $peach;
+			color: white;
+			font-family: inherit;
+			padding: 1rem 1.5rem;
+			line-height: 1.1;
+			font-size: 15px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			border-radius: 8px;
+			font-weight: 400;
+		}
+	}
+}
