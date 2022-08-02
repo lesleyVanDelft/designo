@@ -1,17 +1,18 @@
 import Navbar from '../../components/Navbar';
-import AboutSection from './AboutSection';
 import ScrollTop from '../../components/ScrollTop';
 import Footer from '../../components/Footer';
-
-const About = () => {
+import ContactSection from './ContactSection';
+import LocationCards from '../../components/LocationCards';
+const Contact = () => {
 	return (
 		<>
 			<Navbar />
-			<AboutSection />
+			<ContactSection />
+			{/* <LocationCards /> */}
 			<ScrollTop />
 			<Footer />
 		</>
 	);
 };
 
-export default About;
+export default Contact;

@@ -4,7 +4,7 @@ import styles from '../styles/sass/components/LocationCards.module.scss';
 
 const LocationCards = () => {
 	return (
-		<section className={styles.LocationCards}>
+		<section className={`${styles.LocationCards} `}>
 			{locations.map((el, i) => {
 				return (
 					<article key={i} className={styles.LocationCards__card}>
