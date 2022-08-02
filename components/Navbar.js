@@ -7,6 +7,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useOutsideClick } from '../hooks/useOutsideClick';
+import Link from 'next/link';
 
 const Navbar = () => {
 	const [menuActive, setMenuActive] = useState(false);
@@ -57,9 +58,21 @@ const Navbar = () => {
 			</div>
 
 			<ul className={styles.Navbar__items}>
-				<li>Our Company</li>
-				<li>Locations</li>
-				<li>Contact</li>
+				<li>
+					<Link href="/about">
+						<a>Our Company</a>
+					</Link>
+				</li>
+				<li>
+					<Link href={'/locations'}>
+						<a>Locations</a>
+					</Link>
+				</li>
+				<li>
+					<Link href={'/contact'}>
+						<a>Contact</a>
+					</Link>
+				</li>
 			</ul>
 
 			<AnimatePresence exitBeforeEnter={false}>
@@ -70,9 +83,21 @@ const Navbar = () => {
 						initial="hidden"
 						animate="show"
 						exit="exit">
-						<li>Our Company</li>
-						<li>Locations</li>
-						<li>Contact</li>
+						<li>
+							<Link href="/about">
+								<a>Our Company</a>
+							</Link>
+						</li>
+						<li>
+							<Link href={'/locations'}>
+								<a>Locations</a>
+							</Link>
+						</li>
+						<li>
+							<Link href={'/contact'}>
+								<a>Contact</a>
+							</Link>
+						</li>
 					</motion.ul>
 				)}
 			</AnimatePresence>
