@@ -21,6 +21,11 @@ module.exports = {
 				destination: '/home',
 				permanent: false,
 			},
+			{
+				source: '/about',
+				destination: '/about',
+				permanent: false,
+			},
 		];
 	},
 };
