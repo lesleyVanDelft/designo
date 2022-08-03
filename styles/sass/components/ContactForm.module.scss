@@ -1,7 +1,6 @@
 $peach: hsl(11, 73%, 66%);
 .ContactForm {
 	max-height: calc(100vh - 5rem);
-	// min-height: 100vh;
 	background-color: $peach;
 	display: flex;
 	flex-direction: column;
@@ -10,7 +9,6 @@ $peach: hsl(11, 73%, 66%);
 	padding: 4.5rem 1.5rem;
 	position: relative;
 	z-index: 45;
-	// overflow: hidden;
 	&::before {
 		content: '';
 		position: absolute;
@@ -18,7 +16,6 @@ $peach: hsl(11, 73%, 66%);
 		height: 50%;
 		top: 0;
 		left: 0;
-		// background-color: black;
 		background-image: url('../../../public/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg');
 		background-repeat: no-repeat;
 		background-position: 17% 0%;
@@ -64,7 +61,6 @@ $peach: hsl(11, 73%, 66%);
 	textarea {
 		border: none;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.723);
-		// margin-top: 3px;
 		color: white;
 		width: 100%;
 		background-color: transparent;
