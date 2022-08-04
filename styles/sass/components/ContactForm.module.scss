@@ -70,7 +70,9 @@ $peach: hsl(11, 73%, 66%);
 		position: relative;
 		z-index: 45;
 		font-size: 15px;
+		transition: all 0.1s ease-in-out;
 		&:focus {
+			transition: all 0.1s ease-in-out;
 			outline: none;
 			border-bottom: 2px solid white;
 			margin-bottom: 24px;

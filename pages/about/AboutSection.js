@@ -1,16 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LocationCards from '../../components/LocationCards';
 import { aboutUs } from '../../public/cardData';
 import FlexCard from './FlexCard';
 import styles from '../../styles/sass/components/AboutSection.module.scss';
 
 const AboutSection = () => {
-	const aboutUsTop = aboutUs.filter(el => el.header !== 'The real deal');
-	const aboutUsBot = aboutUs.filter(el => el.header === 'The real deal');
+	const [aboutTop, setAboutTop] = useState([]);
+	const [aboutBot, setAboutBot] = useState([]);
+
+	useEffect(() => {
+		setAboutTop(aboutUs.filter(el => el.header !== 'The real deal'));
+		setAboutBot(aboutUs.filter(el => el.header === 'The real deal'));
+	}, []);
+
+	// const aboutUsTop = aboutUs.filter(el => el.header !== 'The real deal');
+	// const aboutUsBot = aboutUs.filter(el => el.header === 'The real deal');
 
 	return (
 		<section className={styles.AboutSection}>
-			{aboutUsTop.map((el, i) => {
+			{aboutTop.map((el, i) => {
 				return (
 					<FlexCard
 						key={i}
@@ -23,7 +31,7 @@ const AboutSection = () => {
 
 			<LocationCards />
 
-			{aboutUsBot.map((el, i) => {
+			{aboutBot.map((el, i) => {
 				return (
 					<FlexCard
 						key={i}

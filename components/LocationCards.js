@@ -1,4 +1,5 @@
 import Image from 'next/future/image';
+// import Image from 'next/image';
 import { locations } from '../public/cardData';
 import styles from '../styles/sass/components/LocationCards.module.scss';
 
@@ -12,8 +13,10 @@ const LocationCards = () => {
 							<Image
 								src={el.image}
 								alt={'Image of a city landmark'}
+								layout="raw"
 								width={181}
 								height={142}
+								priority={i === 0 && true}
 							/>
 						</figure>
 						<h3>{el.name}</h3>
