@@ -34,7 +34,7 @@ const Card = ({ title, currClass, linkName }) => {
 		if (linkName === '/graphic-design') {
 			setLinkTo('/graphic-design');
 		}
-	}, []);
+	}, [linkName]);
 
 	return (
 		<article className={`${currCat} `}>

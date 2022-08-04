@@ -1,7 +1,8 @@
 // import Image from 'next/future/image';
-import { useWindowSize } from '../../hooks/useWindowSize';
+// import { useWindowSize } from '../../hooks/useWindowSize';
 import Image from 'next/image';
 import styles from '../../styles/sass/components/FlexCard.module.scss';
+// import styles from '../../styles';
 import { useEffect, useState } from 'react';
 
 const FlexCard = ({ data, peach, index }) => {

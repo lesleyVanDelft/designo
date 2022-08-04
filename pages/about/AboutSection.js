@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import LocationCards from '../../components/LocationCards';
 import { aboutUs } from '../../public/cardData';
-import FlexCard from './FlexCard';
+// import FlexCard from './FlexCard';
+import FlexCard from '../../components/FlexCard/FlexCard';
 import styles from '../../styles/sass/components/AboutSection.module.scss';
+// import cardStyles from '../../styles/sass/components/FlexCard.module.scss';
 
 const AboutSection = () => {
 	const [aboutTop, setAboutTop] = useState([]);

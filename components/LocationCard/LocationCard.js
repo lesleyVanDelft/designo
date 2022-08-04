@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../../styles/sass/components/LocationCard.module.scss';
 
 const LocationCard = ({ data }) => {
+	// console.log(data);
 	return (
 		<div className={styles.LocationCard}>
 			<figure className={styles.LocationCard__image}>

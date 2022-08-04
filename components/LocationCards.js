@@ -2,6 +2,7 @@ import Image from 'next/future/image';
 // import Image from 'next/image';
 import { locations } from '../public/cardData';
 import styles from '../styles/sass/components/LocationCards.module.scss';
+import LocationCard from './LocationCard/LocationCard';
 
 const LocationCards = () => {
 	return (
