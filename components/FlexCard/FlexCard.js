@@ -12,6 +12,7 @@ const FlexCard = ({ data, peach, index }) => {
 	});
 
 	const [device, setDevice] = useState();
+	const [imagePath, setImagePath] = useState(data.imageMobile);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -38,6 +39,16 @@ const FlexCard = ({ data, peach, index }) => {
 		}
 	}, [windowSize.width]);
 
+	useEffect(() => {
+		if (device === 'mobile') {
+			setImagePath(data.imageMobile);
+		} else if (device === 'tablet') {
+			setImagePath(data.imageTablet);
+		} else if (device === 'desktop') {
+			setImagePath(data.imageDesktop);
+		}
+	}, [data.imageDesktop, data.imageMobile, data.imageTablet, device]);
+
 	return (
 		<article
 			className={`${styles.FlexCard} ${
@@ -45,7 +56,7 @@ const FlexCard = ({ data, peach, index }) => {
 			}`}>
 			<figure className={`${styles.FlexCard__image}`}>
 				<Image
-					src={data.imageMobile}
+					src={imagePath}
 					alt="About us"
 					// layout="raw"
 					layout="responsive"
