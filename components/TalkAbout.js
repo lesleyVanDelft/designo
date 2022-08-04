@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '../styles/sass/components/TalkAbout.module.scss';
 const TalkAbout = () => {
 	return (
@@ -10,7 +11,11 @@ const TalkAbout = () => {
 				</p>
 			</div>
 
-			<button className={styles.TalkAbout__button}>Get in touch</button>
+			<button className={styles.TalkAbout__button}>
+				<Link href="/contact">
+					<a>Get in touch</a>
+				</Link>{' '}
+			</button>
 		</div>
 	);
 };

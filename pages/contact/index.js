@@ -8,9 +8,8 @@ const Contact = () => {
 		<>
 			<Navbar />
 			<ContactSection />
-			{/* <LocationCards /> */}
 			<ScrollTop />
-			<Footer />
+			<Footer contactPage={true} />
 		</>
 	);
 };

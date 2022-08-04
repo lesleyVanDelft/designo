@@ -10,15 +10,7 @@ import TalkAbout from './TalkAbout';
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 
-const Footer = () => {
-	const isMobile = useMediaQuery({
-		query: '(max-width: 768px)',
-	});
-
-	const isTablet = useMediaQuery({
-		query: '(max-width: 1024px)',
-	});
-	// const [screenSize, setScreenSize] = useState(isMobile);
+const Footer = ({ contactPage }) => {
 	const iconList = [
 		facebookIcon,
 		youtubeIcon,
@@ -27,16 +19,9 @@ const Footer = () => {
 		instagramIcon,
 	];
 
-	// useEffect(() => {
-	// 	if (isMobile) {
-	// 		setScreenSize(isMobile);
-	// 	} else if (isTablet) {
-	// 		setScreenSize(isTablet);
-	// 	}
-	// }, [isMobile, isTablet]);
-
 	return (
 		<footer className={styles.Footer}>
+			{/* {!contactPage && <TalkAbout />} */}
 			<TalkAbout />
 
 			<div className={styles.Footer__content}>
