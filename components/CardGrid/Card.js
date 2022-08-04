@@ -19,6 +19,7 @@ const Card = ({ title, currClass, linkName }) => {
 		if (currClass === 'graphic') {
 			setCurrCat(styles.Card__graphic);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	useEffect(() => {

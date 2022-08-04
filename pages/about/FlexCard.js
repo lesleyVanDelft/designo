@@ -1,7 +1,8 @@
-import Image from 'next/future/image';
+// import Image from 'next/future/image';
+import Image from 'next/image';
 import styles from '../../styles/sass/components/FlexCard.module.scss';
 
-const FlexCard = ({ children, data, peach }) => {
+const FlexCard = ({ data, peach, index }) => {
 	return (
 		<article
 			className={`${styles.FlexCard} ${
@@ -11,9 +12,12 @@ const FlexCard = ({ children, data, peach }) => {
 				<Image
 					src={data.imageMobile}
 					alt="About us"
-					layout="raw"
+					// layout="raw"
+					layout="responsive"
 					width={375}
 					height={320}
+					priority={index === 0 && peach === true ? true : false}
+					quality={1}
 				/>
 			</figure>
 			<div className={styles.FlexCard__text}>

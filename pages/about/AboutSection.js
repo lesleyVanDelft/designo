@@ -11,7 +11,14 @@ const AboutSection = () => {
 	return (
 		<section className={styles.AboutSection}>
 			{aboutUsTop.map((el, i) => {
-				return <FlexCard key={i} data={el} peach={i === 0 ? true : false} />;
+				return (
+					<FlexCard
+						key={i}
+						data={el}
+						peach={i === 0 ? true : false}
+						index={i}
+					/>
+				);
 			})}
 
 			<LocationCards />
