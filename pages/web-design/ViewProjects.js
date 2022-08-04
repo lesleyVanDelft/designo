@@ -15,7 +15,12 @@ const ViewProjects = () => {
 			<div className={styles.DesignTypes__container}>
 				{types.map((el, i) => {
 					return (
-						<Card key={i} title={el.title} currClass={el.name} page={'web'} />
+						<Card
+							key={i}
+							title={el.title}
+							currClass={el.name}
+							linkName={`/${el.name}-design`}
+						/>
 					);
 				})}
 			</div>

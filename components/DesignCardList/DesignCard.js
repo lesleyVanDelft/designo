@@ -1,7 +1,5 @@
 import Image from 'next/future/image';
-import { useEffect, useState } from 'react';
 import styles from '../../styles/sass/components/DesignCard.module.scss';
-import image1 from '../../public/assets/web-design/desktop/image-express.jpg';
 
 const DesignCard = ({ title, text, image, index }) => {
 	return (
