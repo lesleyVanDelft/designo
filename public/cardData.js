@@ -120,7 +120,7 @@ export const locations = [
 		mapImageSmall: '/assets/locations/tablet/image-map-australia.png',
 		mapImageLarge: '/assets/locations/desktop/image-map-australia.png',
 		location: {
-			lat: 43.64401,
+			lat: 33.64401,
 			lng: -79.39454,
 		},
 		address: {
@@ -139,8 +139,8 @@ export const locations = [
 		mapImageSmall: '/assets/locations/tablet/image-map-uk.png',
 		mapImageLarge: '/assets/locations/desktop/image-map-united-kingdom.png',
 		location: {
-			lat: 43.64401,
-			lng: -79.39454,
+			lat: 35.64401,
+			lng: -77.39454,
 		},
 		address: {
 			name: 'Designo UK Office',
