@@ -100,6 +100,10 @@ export const locations = [
 		image: '/assets/shared/desktop/illustration-canada.svg',
 		mapImageSmall: '/assets/locations/tablet/image-map-canada.png',
 		mapImageLarge: '/assets/locations/desktop/image-map-canada.png',
+		location: {
+			lat: 43.64401,
+			lng: -79.39454,
+		},
 		address: {
 			name: 'Designo Central Office',
 			street: '3886 Wellington Street',
@@ -115,6 +119,10 @@ export const locations = [
 		image: '/assets/shared/desktop/illustration-australia.svg',
 		mapImageSmall: '/assets/locations/tablet/image-map-australia.png',
 		mapImageLarge: '/assets/locations/desktop/image-map-australia.png',
+		location: {
+			lat: 43.64401,
+			lng: -79.39454,
+		},
 		address: {
 			name: 'Designo AU Office',
 			street: '19 Balonne Street',
@@ -130,6 +138,10 @@ export const locations = [
 		image: '/assets/shared/desktop/illustration-united-kingdom.svg',
 		mapImageSmall: '/assets/locations/tablet/image-map-uk.png',
 		mapImageLarge: '/assets/locations/desktop/image-map-united-kingdom.png',
+		location: {
+			lat: 43.64401,
+			lng: -79.39454,
+		},
 		address: {
 			name: 'Designo UK Office',
 			street: '13 Colorado Way',

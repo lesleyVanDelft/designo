@@ -5,7 +5,9 @@ import LocationCards from '../../components/LocationCards';
 const ContactSection = () => {
 	return (
 		<section className={styles.ContactSection}>
-			<ContactForm />
+			<main className={styles.ContactSection__main}>
+				<ContactForm />
+			</main>
 			<LocationCards />
 		</section>
 	);

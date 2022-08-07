@@ -3,6 +3,7 @@ import ScrollTop from '../../components/ScrollTop';
 import Footer from '../../components/Footer';
 import ContactSection from './ContactSection';
 import LocationCards from '../../components/LocationCards';
+
 const Contact = () => {
 	return (
 		<>
