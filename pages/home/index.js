@@ -11,8 +11,10 @@ const Homepage = () => {
 		<>
 			<Navbar />
 			<Landing />
-			<Projects />
-			<Description />
+			<main>
+				<Projects />
+				<Description />
+			</main>
 			<ScrollTop />
 			<Footer />
 		</>

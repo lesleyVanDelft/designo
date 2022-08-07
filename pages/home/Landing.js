@@ -1,7 +1,7 @@
 import Image from 'next/future/image';
 import styles from '../../styles/sass/components/Landing.module.scss';
 import phoneImg from '../../public/assets/home/desktop/image-hero-phone.png';
-
+// google docs yellow #ffdc5b
 const Landing = () => {
 	return (
 		<section className={styles.Landing}>
