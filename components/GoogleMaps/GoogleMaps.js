@@ -14,7 +14,6 @@ const GoogleMaps = ({ location }) => {
 	});
 
 	if (!isLoaded) return <div>loading...</div>;
-	// return <Map center={location} />;
 	return (
 		<GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
 			<MarkerF position={center} />
@@ -23,16 +22,3 @@ const GoogleMaps = ({ location }) => {
 };
 
 export default GoogleMaps;
-
-// function Map({ center }) {
-// 	// const center = useMemo(() => ({ lat: 51.65458, lng: 4.86995 }), []);
-// 	const centerMarker = useMemo(
-// 		() => ({ lat: center.latitude, lng: center.longitude }),
-// 		[center.latitude, center.longitude]
-// 	);
-// 	return (
-// 		<GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
-// 			<MarkerF position={centerMarker} />
-// 		</GoogleMap>
-// 	);
-// }
