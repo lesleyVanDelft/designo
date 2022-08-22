@@ -1,6 +1,7 @@
 // import Image from 'next/future/image';
 // import { useWindowSize } from '../../hooks/useWindowSize';
-import Image from 'next/image';
+// import Image from 'next/image';
+import Image from 'next/future/image';
 import styles from '../../styles/sass/components/FlexCard.module.scss';
 // import styles from '../../styles';
 import { useEffect, useState } from 'react';
@@ -32,22 +33,25 @@ const FlexCard = ({ data, peach, index }) => {
 	useEffect(() => {
 		if (windowSize.width < 768) {
 			setDevice('mobile');
+			setImagePath(data?.imageMobile);
 		} else if (windowSize.width > 768 && windowSize.width < 1024) {
 			setDevice('tablet');
+			setImagePath(data?.imageTablet);
 		} else {
 			setDevice('desktop');
+			setImagePath(data?.imageDesktop);
 		}
-	}, [windowSize.width]);
+	}, [data.imageDesktop, data.imageMobile, data.imageTablet, windowSize.width]);
 
-	useEffect(() => {
-		if (device === 'mobile') {
-			setImagePath(data.imageMobile);
-		} else if (device === 'tablet') {
-			setImagePath(data.imageTablet);
-		} else if (device === 'desktop') {
-			setImagePath(data.imageDesktop);
-		}
-	}, [data.imageDesktop, data.imageMobile, data.imageTablet, device]);
+	// useEffect(() => {
+	// 	if (device === 'mobile') {
+	// 		setImagePath(data.imageMobile);
+	// 	} else if (device === 'tablet') {
+	// 		setImagePath(data.imageTablet);
+	// 	} else if (device === 'desktop') {
+	// 		setImagePath(data.imageDesktop);
+	// 	}
+	// }, [data.imageDesktop, data.imageMobile, data.imageTablet, device]);
 
 	return (
 		<article
@@ -58,10 +62,11 @@ const FlexCard = ({ data, peach, index }) => {
 				<Image
 					src={imagePath}
 					alt="About us"
-					// layout="raw"
-					layout="responsive"
+					layout="raw"
+					// layout="fill"
 					width={375}
 					height={320}
+					// objectFit="contain"
 					priority={index === 0 && true}
 					quality={100}
 				/>

@@ -14,7 +14,7 @@ const TalkAbout = () => {
 			<button className={styles.TalkAbout__button}>
 				<Link href="/contact">
 					<a>Get in touch</a>
-				</Link>{' '}
+				</Link>
 			</button>
 		</div>
 	);
