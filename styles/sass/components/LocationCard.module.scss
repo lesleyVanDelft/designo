@@ -2,7 +2,11 @@ $peach: hsl(11, 73%, 66%);
 
 .LocationCard {
 	width: 100%;
-	&__image {
+	@media screen and (min-width: 768px) {
+		width: auto;
+		margin: 0 2.4375rem;
+	}
+	&__map {
 		width: auto;
 		// height: 20rem;
 
@@ -26,6 +30,27 @@ $peach: hsl(11, 73%, 66%);
 		z-index: 45;
 		overflow: hidden;
 
+		@media screen and(min-width: 768px) {
+			border-radius: 10px;
+			margin-bottom: 7.5rem;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			height: 326px;
+			padding-left: 4.6875rem;
+			padding-right: 170px;
+			h2 {
+				padding-bottom: 2rem;
+			}
+
+			&_lists {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				width: 90%;
+			}
+		}
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -37,6 +62,12 @@ $peach: hsl(11, 73%, 66%);
 			background-repeat: no-repeat;
 			background-size: 150%;
 			z-index: 44;
+
+			@media screen and (min-width: 768px) {
+				background-image: url('../../../public/assets/shared/desktop/bg-pattern-two-circles.svg');
+				background-size: 79%;
+				background-position: 0 100%;
+			}
 		}
 		h2 {
 			color: $peach;
@@ -54,6 +85,10 @@ $peach: hsl(11, 73%, 66%);
 				&:first-of-type {
 					font-weight: 700;
 				}
+			}
+
+			@media screen and (min-width: 768px) {
+				align-items: flex-start;
 			}
 		}
 	}
