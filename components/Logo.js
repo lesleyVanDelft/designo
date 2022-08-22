@@ -13,6 +13,7 @@ const Logo = () => {
 						width={202}
 						height={27}
 						quality={100}
+						priority={true}
 					/>
 				</a>
 			</Link>
