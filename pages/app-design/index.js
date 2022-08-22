@@ -8,12 +8,7 @@ const AppDesign = () => {
 	return (
 		<>
 			<Navbar />
-			<PageHeader
-				title={'App Design'}
-				text={
-					'Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.'
-				}
-			/>
+
 			<AppDesignSection />
 			<ViewProjects />
 			<ScrollTop />

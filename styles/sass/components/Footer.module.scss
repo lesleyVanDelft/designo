@@ -1,4 +1,5 @@
-.Footer {
+.Footer,
+.FooterContact {
 	height: 100vh;
 	// height: 100%;
 	background-color: #1d1c1e;
@@ -169,5 +170,16 @@
 				margin: 0;
 			}
 		}
+	}
+}
+
+.FooterContact {
+	// background-color: red;
+
+	// padding-top: 0;
+	height: fit-content;
+
+	.Footer__image {
+		padding-top: 5rem;
 	}
 }

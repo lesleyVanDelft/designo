@@ -11,10 +11,10 @@ const WebDesign = () => {
 	return (
 		<>
 			<Navbar />
-			<PageHeader
+			{/* <PageHeader
 				title="Web Design"
 				text="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
-			/>
+			/> */}
 			<WebDesignSection />
 			<ViewProjects />
 			<ScrollTop />

@@ -1,8 +1,16 @@
 .PaddingMobile {
 	padding: 0 1.5rem;
+
+	@media screen and (min-width: 768px) {
+		padding: 0;
+	}
 }
 
 .DesignTypes {
+	padding-bottom: 17.875rem;
+	@media screen and (min-width: 768px) {
+		padding-bottom: 24rem;
+	}
 	&__container {
 		// background-color: red;
 		height: 32.75rem;
@@ -12,7 +20,18 @@
 		&:nth-child(1) {
 			margin-bottom: 1rem;
 		}
+		@media screen and (min-width: 768px) {
+			// padding: 0;
+			height: fit-content;
+			margin: 0 2.4375rem;
+		}
 	}
 
-	padding-bottom: 17.875rem;
+	@media screen and (min-width: 768px) {
+		article {
+			&:first-child {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
 }

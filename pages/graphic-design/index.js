@@ -9,12 +9,6 @@ const GraphicDesign = () => {
 	return (
 		<>
 			<Navbar />
-			<PageHeader
-				title={'Graphic Design'}
-				text={
-					'We deliver eye-catching branding materials that are tailored to meet your business objectives.'
-				}
-			/>
 			<GraphicDesignSection />
 			<ViewProjects />
 			<ScrollTop />

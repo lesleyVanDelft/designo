@@ -20,9 +20,9 @@ const Footer = ({ contactPage }) => {
 	];
 
 	return (
-		<footer className={styles.Footer}>
+		<footer className={contactPage ? styles.FooterContact : styles.Footer}>
 			{/* {!contactPage && <TalkAbout />} */}
-			<TalkAbout />
+			{!contactPage && <TalkAbout />}
 
 			<div className={styles.Footer__content}>
 				<div className={styles.Footer__image}>

@@ -6,46 +6,44 @@ import { useEffect, useState } from 'react';
 const DesignCardList = ({ page }) => {
 	return (
 		<div className={styles.DesignCardList}>
-			<div>
-				{page === '/web-design' &&
-					webDesign.map((el, i) => {
-						return (
-							<DesignCard
-								key={i}
-								title={el.title}
-								image={el.image}
-								text={el.text}
-								index={i}
-							/>
-						);
-					})}
+			{page === '/web-design' &&
+				webDesign.map((el, i) => {
+					return (
+						<DesignCard
+							key={i}
+							title={el.title}
+							image={el.image}
+							text={el.text}
+							index={i}
+						/>
+					);
+				})}
 
-				{page === '/app-design' &&
-					appDesign.map((el, i) => {
-						return (
-							<DesignCard
-								key={i}
-								title={el.title}
-								image={el.image}
-								text={el.text}
-								index={i}
-							/>
-						);
-					})}
+			{page === '/app-design' &&
+				appDesign.map((el, i) => {
+					return (
+						<DesignCard
+							key={i}
+							title={el.title}
+							image={el.image}
+							text={el.text}
+							index={i}
+						/>
+					);
+				})}
 
-				{page === '/graphic-design' &&
-					graphicDesign.map((el, i) => {
-						return (
-							<DesignCard
-								key={i}
-								title={el.title}
-								image={el.image}
-								text={el.text}
-								index={i}
-							/>
-						);
-					})}
-			</div>
+			{page === '/graphic-design' &&
+				graphicDesign.map((el, i) => {
+					return (
+						<DesignCard
+							key={i}
+							title={el.title}
+							image={el.image}
+							text={el.text}
+							index={i}
+						/>
+					);
+				})}
 		</div>
 	);
 };
