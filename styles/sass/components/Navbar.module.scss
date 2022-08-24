@@ -8,7 +8,46 @@
 	height: 5rem;
 	align-items: center;
 	padding: 0 1.5rem;
-	// overflow-y: hidden;
+
+	&__mobileMenuToggle {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 20px;
+		position: relative;
+
+		span {
+			height: 4px;
+			width: 25px;
+			background-color: black;
+		}
+
+		&.active {
+			span {
+				transition: all 0.3s ease-in-out;
+
+				&:nth-child(1) {
+					-webkit-transform-origin: left center;
+					transform-origin: left center;
+					-webkit-transform: translateY(-4px) translateX(3px) rotate(45deg);
+					transform: translateY(-0px) translateX(3px) rotate(45deg);
+				}
+				&:nth-child(2) {
+					-webkit-transform-origin: left center;
+					transform-origin: left center;
+					width: 0%;
+					height: 0%;
+					opacity: 0;
+				}
+				&:nth-child(3) {
+					-webkit-transform-origin: left center;
+					transform-origin: left center;
+					-webkit-transform: translateY(2.5px) translateX(2.5px) rotate(-45deg);
+					transform: translateY(2px) translateX(2.5px) rotate(-45deg);
+				}
+			}
+		}
+	}
 
 	picture {
 		display: flex;
@@ -21,7 +60,6 @@
 
 	@media screen and (min-width: 768px) {
 		.Navbar {
-			// padding: 0 5rem;
 			&__mobileMenuToggle {
 				display: none;
 			}

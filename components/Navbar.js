@@ -23,6 +23,10 @@ const Navbar = () => {
 		menuActive ? setMenuIcon(CloseIcon) : setMenuIcon(Hamburger);
 	}, [menuActive]);
 
+	const activeClassName = menuActive
+		? ` ${styles.Navbar__mobileMenuToggle} ${styles['active']}`
+		: styles.Navbar__mobileMenuToggle;
+
 	const framerVariant = {
 		hidden: {
 			opacity: 0,
@@ -49,12 +53,17 @@ const Navbar = () => {
 	return (
 		<nav className={styles.Navbar} ref={navbarRef}>
 			<Logo />
-			<div className={styles.Navbar__mobileMenuToggle}>
-				<Image
-					src={Hamburger}
-					alt="Mobile hamburger icon"
-					onClick={() => setMenuActive(!menuActive)}
-				/>
+			<div
+				className={activeClassName}
+				// className={`${
+				// 	menuActive
+				// 		? styles.Navbar__mobileMenuToggleActive
+				// 		: styles.Navbar__mobileMenuToggle
+				// }`}
+				onClick={() => setMenuActive(!menuActive)}>
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
 
 			<ul className={styles.Navbar__items}>
