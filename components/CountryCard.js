@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { scrollOnViewX, scrollOnViewXReverse } from './framerVariants';
 import styles from '../styles/sass/components/LocationCards.module.scss';
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 const CountryCard = ({ el, index }) => {
 	const animationControl = useAnimation();
@@ -34,7 +35,11 @@ const CountryCard = ({ el, index }) => {
 				/>
 			</figure>
 			<h3>{el.name}</h3>
-			<button>See Location</button>
+			<Link href={'/locations'}>
+				<a>
+					<button>See Location</button>
+				</a>
+			</Link>
 		</motion.article>
 	);
 };
