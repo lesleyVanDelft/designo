@@ -9,6 +9,7 @@ import styles from '../styles/sass/components/Footer.module.scss';
 import TalkAbout from './TalkAbout';
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const Footer = ({ contactPage }) => {
 	const iconList = [
@@ -36,16 +37,40 @@ const Footer = ({ contactPage }) => {
 					/>
 
 					<ul className={styles.listTablet}>
-						<li className={styles.listItemTablet}>Our Company</li>
-						<li className={styles.listItemTablet}>Locations</li>
-						<li className={styles.listItemTablet}>Contact</li>
+						<Link href={'/about'}>
+							<li className={styles.listItemTablet}>
+								<a>Our Company</a>
+							</li>
+						</Link>
+						<Link href={'/locations'}>
+							<li className={styles.listItemTablet}>
+								<a>Locations</a>
+							</li>
+						</Link>
+						<Link href={'/contact'}>
+							<li className={styles.listItemTablet}>
+								<a>Contact</a>
+							</li>
+						</Link>
 					</ul>
 				</div>
 
 				<ul className={styles.listMobile}>
-					<li className={styles.listItemMobile}>Our Company</li>
-					<li className={styles.listItemMobile}>Locations</li>
-					<li className={styles.listItemMobile}>Contact</li>
+					<Link href={'/about'}>
+						<li className={styles.listItemMobile}>
+							<a>Our Company</a>
+						</li>
+					</Link>
+					<Link href={'/locations'}>
+						<li className={styles.listItemMobile}>
+							<a>Locations</a>
+						</li>
+					</Link>
+					<Link href={'/contact'}>
+						<li className={styles.listItemMobile}>
+							<a>Contact</a>
+						</li>
+					</Link>
 				</ul>
 
 				<div className={styles.textContainer}>
