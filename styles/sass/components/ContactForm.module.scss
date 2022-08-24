@@ -7,6 +7,21 @@ $peach: hsl(11, 73%, 66%);
 	width: 100%;
 	align-items: center;
 	padding: 4.5rem 1.5rem;
+	position: relative;
+	// overflow-x: visible;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0%;
+		height: 100%;
+		width: 100%;
+		background-image: url('../../../public/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg');
+		background-repeat: no-repeat;
+		background-size: 240%;
+		background-position: 20% 0;
+	}
 
 	@media screen and (min-width: 768px) {
 		padding: 4.5rem 3.1875rem;
