@@ -32,6 +32,7 @@ const DescriptionList = () => {
 				return (
 					<DescriptionCard
 						key={i}
+						index={i}
 						image={el.image}
 						title={el.title}
 						text={el.paragraph}

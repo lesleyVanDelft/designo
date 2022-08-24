@@ -1,10 +1,10 @@
-// import Image from 'next/future/image';
-// import { useWindowSize } from '../../hooks/useWindowSize';
-// import Image from 'next/image';
 import Image from 'next/future/image';
-import styles from '../../styles/sass/components/FlexCard.module.scss';
-// import styles from '../../styles';
 import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { scrollOnView } from '../framerVariants';
+import { motion, useAnimation } from 'framer-motion';
+
+import styles from '../../styles/sass/components/FlexCard.module.scss';
 
 const FlexCard = ({ data, peach, index }) => {
 	const [windowSize, setWindowSize] = useState({
@@ -43,18 +43,21 @@ const FlexCard = ({ data, peach, index }) => {
 		}
 	}, [data.imageDesktop, data.imageMobile, data.imageTablet, windowSize.width]);
 
-	// useEffect(() => {
-	// 	if (device === 'mobile') {
-	// 		setImagePath(data.imageMobile);
-	// 	} else if (device === 'tablet') {
-	// 		setImagePath(data.imageTablet);
-	// 	} else if (device === 'desktop') {
-	// 		setImagePath(data.imageDesktop);
-	// 	}
-	// }, [data.imageDesktop, data.imageMobile, data.imageTablet, device]);
+	const animationControl = useAnimation();
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			animationControl.start('visible');
+		}
+	}, [animationControl, inView]);
 
 	return (
-		<article
+		<motion.article
+			ref={ref}
+			animate={animationControl}
+			initial="hidden"
+			variants={scrollOnView}
 			className={`${styles.FlexCard} ${
 				peach ? styles.FlexCard__peach : 'lol'
 			}`}>
@@ -76,7 +79,7 @@ const FlexCard = ({ data, peach, index }) => {
 				<p>{data.text}</p>
 				{data.additionalText !== undefined && <p>{data.additionalText}</p>}
 			</div>
-		</article>
+		</motion.article>
 	);
 };
 

@@ -1,6 +1,9 @@
 import { React, useEffect, useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import Link from 'next/link';
+import { scrollOnView } from '../framerVariants';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 import styles from '../../styles/sass/components/Card.module.scss';
 
 const Card = ({ title, currClass, linkName }) => {
@@ -36,8 +39,22 @@ const Card = ({ title, currClass, linkName }) => {
 		}
 	}, [linkName]);
 
+	const animationControl = useAnimation();
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			animationControl.start('visible');
+		}
+	}, [animationControl, inView]);
+
 	return (
-		<article className={`${currCat} `}>
+		<motion.article
+			ref={ref}
+			animate={animationControl}
+			initial="hidden"
+			variants={scrollOnView}
+			className={`${currCat}`}>
 			<h2>{title}</h2>
 			<button>
 				<Link href={`${linkTo}`}>
@@ -46,7 +63,7 @@ const Card = ({ title, currClass, linkName }) => {
 					</a>
 				</Link>
 			</button>
-		</article>
+		</motion.article>
 	);
 };
 

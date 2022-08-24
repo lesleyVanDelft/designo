@@ -1,12 +1,26 @@
-// import Image from 'next/future/image';
-import Image from 'next/image';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+import { scrollOnView } from '../framerVariants';
 import styles from '../../styles/sass/components/LocationCard.module.scss';
 import GoogleMaps from '../GoogleMaps/GoogleMaps';
 
 const LocationCard = ({ data }) => {
-	// console.log(data);
+	const animationControl = useAnimation();
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			animationControl.start('visible');
+		}
+	}, [animationControl, inView]);
 	return (
-		<div className={styles.LocationCard}>
+		<motion.div
+			className={styles.LocationCard}
+			ref={ref}
+			animate={animationControl}
+			initial="hidden"
+			variants={scrollOnView}>
 			<div className={styles.LocationCard__map}>
 				<GoogleMaps location={data.location} />
 			</div>
@@ -26,7 +40,7 @@ const LocationCard = ({ data }) => {
 					</ul>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

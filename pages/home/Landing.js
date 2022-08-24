@@ -2,10 +2,28 @@ import Image from 'next/future/image';
 import styles from '../../styles/sass/components/Landing.module.scss';
 import phoneImg from '../../public/assets/home/desktop/image-hero-phone.png';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { scrollOnView } from '../../components/framerVariants';
+import { motion, useAnimation } from 'framer-motion';
 // google docs yellow #ffdc5b
 const Landing = () => {
+	const animationControl = useAnimation();
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			animationControl.start('visible');
+		}
+	}, [animationControl, inView]);
+
 	return (
-		<section className={styles.Landing}>
+		<motion.section
+			className={styles.Landing}
+			ref={ref}
+			animate={animationControl}
+			initial="hidden"
+			variants={scrollOnView}>
 			<main className={styles.Landing__content}>
 				<div>
 					<h1 className={styles.Landing__heading}>
@@ -40,7 +58,7 @@ const Landing = () => {
 					quality={100}
 				/>
 			</figure>
-		</section>
+		</motion.section>
 	);
 };
 

@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { scrollOnView } from '../../components/framerVariants';
+import { motion, useAnimation } from 'framer-motion';
 import styles from '../../styles/sass/components/ContactForm.module.scss';
 
 const ContactForm = () => {
@@ -16,8 +19,23 @@ const ContactForm = () => {
 		}, 2000);
 	};
 
+	const animationControl = useAnimation();
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			animationControl.start('visible');
+		}
+	}, [animationControl, inView]);
+
 	return (
-		<form className={styles.ContactForm} autoComplete="off">
+		<motion.form
+			className={styles.ContactForm}
+			autoComplete="off"
+			ref={ref}
+			animate={animationControl}
+			initial="hidden"
+			variants={scrollOnView}>
 			<div className={styles.ContactForm__text}>
 				<h2>Contact Us</h2>
 				<p>
@@ -53,7 +71,7 @@ const ContactForm = () => {
 				{submitting && !submitSuccess && 'Submitting...'}
 				{submitSuccess && !submitting && 'Submitted!'}
 			</button>
-		</form>
+		</motion.form>
 	);
 };
 

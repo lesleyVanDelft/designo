@@ -20,30 +20,34 @@ const AboutSection = () => {
 
 	return (
 		<section className={styles.AboutSection}>
-			{aboutTop.map((el, i) => {
-				return (
-					<FlexCard
-						key={i}
-						data={el}
-						peach={i === 0 ? true : false}
-						index={i}
-					/>
-				);
-			})}
+			<div className={styles.AboutSection__top}>
+				{aboutTop.map((el, i) => {
+					return (
+						<FlexCard
+							key={i}
+							data={el}
+							peach={i === 0 ? true : false}
+							index={i}
+						/>
+					);
+				})}
+			</div>
 
 			<LocationCards />
 
-			{aboutBot.map((el, i) => {
-				return (
-					<FlexCard
-						key={i}
-						data={el}
-						index={i}
-						peach={false}
-						additionalText={el.additionalText}
-					/>
-				);
-			})}
+			<div className={styles.AboutSection__bot}>
+				{aboutBot.map((el, i) => {
+					return (
+						<FlexCard
+							key={i}
+							data={el}
+							index={i}
+							peach={false}
+							additionalText={el.additionalText}
+						/>
+					);
+				})}
+			</div>
 		</section>
 	);
 };

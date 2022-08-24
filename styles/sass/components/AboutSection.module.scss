@@ -1,5 +1,10 @@
 .AboutSection {
 	margin-bottom: 18.75rem;
+	// min-height: 100vh;
+
+	&__top {
+		min-height: 100vh;
+	}
 
 	@media screen and (min-width: 768px) {
 		margin: 0 2.4375rem;
