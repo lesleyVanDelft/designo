@@ -1,6 +1,6 @@
 $peach: hsl(11, 73%, 66%);
 .ContactForm {
-	height: calc(100vh - 5rem);
+	min-height: calc(100vh - 5rem);
 	background-color: $peach;
 	display: flex;
 	flex-direction: column;
