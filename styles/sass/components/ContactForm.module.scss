@@ -1,6 +1,6 @@
 $peach: hsl(11, 73%, 66%);
 .ContactForm {
-	max-height: calc(100vh - 5rem);
+	height: calc(100vh - 5rem);
 	background-color: $peach;
 	display: flex;
 	flex-direction: column;
@@ -10,7 +10,6 @@ $peach: hsl(11, 73%, 66%);
 
 	@media screen and (min-width: 768px) {
 		padding: 4.5rem 3.1875rem;
-		// padding-right: ;
 		align-items: flex-start;
 	}
 

@@ -17,24 +17,24 @@ $peach: hsl(11, 73%, 66%);
 			border-radius: 10px;
 		}
 
-		&::before {
-			content: '';
-			position: absolute;
-			width: 292px;
-			height: 292px;
-			bottom: -28%;
-			left: 55%;
-			background-image: url('../../../public/assets/shared/desktop/bg-pattern-small-circle.svg');
-			background-repeat: no-repeat;
-			background-size: 100%;
-			overflow: hidden;
-			z-index: 40;
+		// &::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	width: 292px;
+		// 	height: 292px;
+		// 	bottom: -28%;
+		// 	left: 55%;
+		// 	background-image: url('../../../public/assets/shared/desktop/bg-pattern-small-circle.svg');
+		// 	background-repeat: no-repeat;
+		// 	background-size: 100%;
+		// 	overflow: hidden;
+		// 	z-index: 40;
 
-			// @media screen and (min-width: 768px) {
-			// 	top: 0;
-			// 	left: 0;
-			// 	background-size: 200%;
-			// }
-		}
+		// 	// @media screen and (min-width: 768px) {
+		// 	// 	top: 0;
+		// 	// 	left: 0;
+		// 	// 	background-size: 200%;
+		// 	// }
+		// }
 	}
 }

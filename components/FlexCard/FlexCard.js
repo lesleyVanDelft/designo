@@ -67,7 +67,7 @@ const FlexCard = ({ data, peach, index }) => {
 					width={375}
 					height={320}
 					// objectFit="contain"
-					priority={index === 0 && true}
+					priority={index === 0 ? true : false}
 					quality={100}
 				/>
 			</figure>
